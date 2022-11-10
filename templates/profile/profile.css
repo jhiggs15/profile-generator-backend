@@ -1,0 +1,147 @@
+@import url("https://pdfmonkey-resources.s3.eu-west-3.amazonaws.com/css/tailwind-light.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&display=swap');
+@import url("./assets/employee_background.png");
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    margin: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
+
+div {
+  position: relative;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Anton', sans-serif;
+}
+
+
+body {
+  position: absolute;
+  width: 8.3in;
+  height: 11.7in;  
+  font-family: 'Libre Franklin', sans-serif;
+  z-index: 0;
+  box-sizing: border-box;
+
+}
+
+.background-image {
+
+  position: absolute;
+  z-index: -1;
+  background-image: url("./assets/employee_background.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 0 .25in .25in .25in;
+  grid-template-columns: 4in 1fr ;
+  grid-template-rows: 3.35in 1.35in .5in 1fr;
+  grid-template-areas: 
+  'Basic-Info Profile-Image'
+  'Fun-Fact Profile-Image'
+  'Work-Experience-Title Tech-Experience-Title'
+  'Work-Experience Tech-Experience';
+}
+
+.basic-info {
+  padding-top: .25in;
+  grid-area: Basic-Info;
+}
+
+.profile-image {
+  grid-area: Profile-Image;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  /* height: 95%; */
+  width: 100%;
+  /* max-height: 4.4in; */
+  border:0.4em solid white;
+  background-color:white;
+}
+
+.fun-fact {
+  grid-area: Fun-Fact;
+}
+
+.work-experience {
+  grid-area: Work-Experience;
+}
+
+.work-experience-list {
+  list-style: none;
+}
+
+.tech-experience-title {
+  grid-area: Tech-Experience-Title;
+  padding-left: .25in;
+  color: #01b8ff;
+}
+
+.tech-experience-title::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background: #01b8ff;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.tech-experience {
+  grid-area: Tech-Experience;
+  padding-top: 20px;
+  padding-left: .25in;
+
+}
+
+.tech-experience-list {
+  list-style: none;
+}
+
+.tech-experience-text{
+  color: #01b8ff;
+}
+
+.education-section {
+  font-family: 'Anton', sans-serif;
+  color: #333;
+}
+
+.education-section:before {
+  content: "";
+  width: 340px;
+  height: 1px;
+  background: #333;
+  display: block;
+}
+
+.fun-fact-title:after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  background: #fff;
+  display: block;
+  margin-top: 0.5rem;
+}
+    
+.tech-section h4:after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background: #01b8ff;
+  margin-top: 0.5rem;
+}
+
+
