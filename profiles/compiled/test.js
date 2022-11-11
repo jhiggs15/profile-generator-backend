@@ -1,4 +1,4 @@
-module.exports = {"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+export default {"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3="function", alias4=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
         if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
           return parent[propertyName];
@@ -6,7 +6,7 @@ module.exports = {"compiler":[8,">= 4.3.0"],"main":function(container,depth0,hel
         return undefined
     };
 
-  return "<!DOCTYPE html>\n<html lang=\"en-US\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width\" />\n    <link href=\"./profile.css\" rel=\"stylesheet\" />\n\n    <div class=\"container\">\n      <div class=\"background-image\">\n      </div>  \n      <div class=\"profile-grid\">\n      \n        <div class=\"basic-info\">\n          <h1 class=\"bold text-6xl text-left text-white uppercase\">"
+  return "<!DOCTYPE html>\n<html lang=\"en-US\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width\" />\n    <link href=\"./test.css\" rel=\"stylesheet\" />\n\n    <div class=\"container\">\n      <div class=\"background-image\">\n      </div>  \n      <div class=\"profile-grid\">\n      \n        <div class=\"basic-info\">\n          <h1 class=\"bold text-6xl text-left text-white uppercase\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"name") || (depth0 != null ? lookupProperty(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":14,"column":67},"end":{"line":14,"column":75}}}) : helper)))
     + "</h1>\n          <h4 class=\"bold mb-4 mt-4 text-4xl text-left text-white uppercase\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"title") || (depth0 != null ? lookupProperty(depth0,"title") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data,"loc":{"start":{"line":15,"column":77},"end":{"line":15,"column":86}}}) : helper)))
