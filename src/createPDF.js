@@ -3,7 +3,7 @@ import chromium from 'chrome-aws-lambda';
 import { promises } from 'fs';
 import * as Handlebars  from '../handlebars.runtime.cjs';
 import profileTemplate from '../profiles/compiled/test.js';
-import { templateFolder } from './paths.js';
+import { dirname, templateFolder } from './paths.js';
 
 // NOTE: use 512MB for aws lambda function
 const getPDF = async (templateName, data) => {
@@ -38,6 +38,8 @@ const data = {
   name: 'John Higgs',
   title: 'Software Developer'
 }
+const templateName = "test";
 
-const pdf = await getPDF("test", data);
-await promises.writeFile(`./${templateName}.pdf`, pdf);
+const pdf = await getPDF(templateName, data);
+const destination = join(dirname, 'profiles', 'output', `${templateName}.pdf`);
+await promises.writeFile(destination, pdf);
