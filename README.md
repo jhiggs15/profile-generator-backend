@@ -1,4 +1,3 @@
 # Profile Generator Chromium example
-To run this you must have node installed and perform the following commands
-- npm i
-- npm run start
+## Production
+Production for this project involves a lambda function to get this setup

@@ -1,11 +1,10 @@
 @import url("https://pdfmonkey-resources.s3.eu-west-3.amazonaws.com/css/tailwind-light.min.css");
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&display=swap');
 @import url("./assets/employee_background.png");
 
 @media print {
-  body {
+  .container {
     -webkit-print-color-adjust: exact !important;
     margin: 0;
     width: 100vw !important;
@@ -22,7 +21,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-body {
+.container {
   position: absolute;
   width: 8.3in;
   height: 11.7in;  

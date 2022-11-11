@@ -1,15 +1,16 @@
 {
   "name": "profile-generator-backend",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "pdf": "node ./src/createPDF.js",
+    "compile": "node ./src/precompileTemplate.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "handlebars": "^4.7.7",
     "puppeteer": "^19.2.2"
   }
 }
