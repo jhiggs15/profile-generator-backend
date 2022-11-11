@@ -12,7 +12,7 @@ const getPDF = async (templateName, data) => {
     args: chromium.args,
     executablePath: await chromium.executablePath,
     // change headless to false to see what is being brought up on the page
-    headless: false,
+    headless: true,
     ignoreHTTPSErrors: true
   });
   const page = await browser.newPage();
@@ -28,7 +28,6 @@ const getPDF = async (templateName, data) => {
   // create pdf
   await page.goto(tempFilePath, {waitUntil: 'networkidle0'});
   const pdf = await page.pdf({format: "A4"});
-  await promises.writeFile(`./${templateName}.pdf`, pdf);
   // remove created template
   await promises.rm(tempFilePath);
   browser.close();
@@ -39,4 +38,6 @@ const data = {
   name: 'John Higgs',
   title: 'Software Developer'
 }
-getPDF("test", data)
+
+const pdf = await getPDF("test", data);
+await promises.writeFile(`./${templateName}.pdf`, pdf);
