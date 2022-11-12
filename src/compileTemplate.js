@@ -1,7 +1,7 @@
 import { join } from 'path';
 import Handlebars from 'handlebars';
 import { promises } from 'fs';
-import { templateFolder, compiledFolder  } from './paths.js';
+import { templateFolder, compiledFolder } from './index.js';
 
 const addTemplate = async (templateName) => {
   const pathToTemplateDirectory = join(templateFolder, templateName)
